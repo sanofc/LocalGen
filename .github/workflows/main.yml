@@ -1,4 +1,15 @@
+name: Hello macOS
+
+on:
+  workflow_dispatch:
+
 jobs:
-  my_job:
-    name: deploy to staging
+  say-hello:
     runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Say Hello
+      run: echo "hello"
